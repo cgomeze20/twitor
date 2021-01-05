@@ -2,7 +2,7 @@
 importScripts('js/sw-utils.js');
 
 const STATIC_CACHES    = 'static-v8';
-const DYNAMIC_CACHES   = 'dynamic-v1';
+const DYNAMIC_CACHES   = 'dynamic-v2';
 const INMUTABLE_CACHES = 'inmutable-v1';
 
 
@@ -51,6 +51,11 @@ self.addEventListener('activate', e => {
             if( key !== STATIC_CACHES && key.includes('static')){
                 return caches.delete(key);
             }
+
+            if( key !== DYNAMIC_CACHES && key.includes('dynamic')){
+                return caches.delete(key);
+            }
+
         })
     })
     e. waitUntil(respuesta);
