@@ -1,13 +1,13 @@
 
 importScripts('js/sw-utils.js');
 
-const STATIC_CACHES    = 'static-v6';
+const STATIC_CACHES    = 'static-v7';
 const DYNAMIC_CACHES   = 'dynamic-v1';
 const INMUTABLE_CACHES = 'inmutable-v1';
 
 
 const APP_SHELL = [
-    '/',
+    // '/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
